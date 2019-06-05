@@ -25,6 +25,7 @@
             android:inputType="text"
             android:hint="FIRST NAME"/>
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
             android:layout_weight="0.5"
@@ -39,17 +40,22 @@
                 android:hint="LAST NAME"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
+
+
+
     <!-- Email Label -->
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/register_activity_Etemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/register_activity_Etemail"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
     </android.support.design.widget.TextInputLayout>
 
 
@@ -57,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <android.support.design.widget.TextInputLayout
+      <!--  <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
             android:layout_weight="0.3"
             android:layout_height="wrap_content"
@@ -69,7 +75,9 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:hint="+977"/>
-        </android.support.design.widget.TextInputLayout>
+        </android.support.design.widget.TextInputLayout>-->
+
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
             android:layout_weight="0.7"
@@ -86,32 +94,49 @@
 
     </LinearLayout>
 
+
+
     <!-- Password Label -->
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/register_activity_Etpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/register_activity_Etpassword"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:inputType="textPassword" />
+
     </android.support.design.widget.TextInputLayout>
 
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/register_activity_Btnregister"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
+
         android:textColor="#fff"
-        android:background="#363f45"
+        android:background="#1b9af7"
         android:layout_marginBottom="24dp"
         android:textSize="20dp"
         android:layout_gravity="center_horizontal"
         android:padding="12dp"
         android:text="Register"/>
+
+    <TextView
+        android:id="@+id/register_activity_Btnalreadylogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already a Meamber? Login"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        />
 
 
 </LinearLayout>

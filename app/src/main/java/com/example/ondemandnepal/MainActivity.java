@@ -8,7 +8,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
+    private final int SPLASH_DISPLAY_LENGTH = 400;
 
     /** Called when the activity is first created. */
 

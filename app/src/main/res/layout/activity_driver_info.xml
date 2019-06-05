@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_height="match_parent"
+    tools:context=".DriverInfoActivity">
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="PLEASE CHOOSE HOW YOU WOULD LIKE TO PARTNER WITH ODN"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="250dp"></TextView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:hint="VEHICLE MODEL"/>
+
+    <EditText
+        android:id="@+id/activity_driver_info_Etvehicle_model"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:hint="Hundai Eon"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:hint="VEHICLE REGISTRATION NO"/>
+
+    <EditText
+        android:id="@+id/activity_driver_info_Etvehiclereg"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:hint="BA 1 Kha 1234"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:hint="VEHICLE COLOR"/>
+
+    <EditText
+        android:id="@+id/activity_driver_info_Etcolor"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:hint="Black"/>
+
+   <EditText
+       android:layout_marginTop="50dp"
+       android:id="@+id/activity_driver_info_Etdatepicker"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Date"/>
+    <Button
+        android:id="@+id/activity_driver_info_Btn_submit"
+        android:layout_marginTop="90dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:text="Submit"
+        android:background="#1b9af7"
+        android:layout_gravity="center"/>
+</LinearLayout>
+
+</LinearLayout>
