@@ -22,6 +22,21 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="50dp"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:hint="VEHICLE MAKE"/>
+
+    <EditText
+        android:id="@+id/activity_driver_info_Etvehicle_make"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:hint="Hundai"/>
     <TextView
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -35,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:hint="Hundai Eon"/>
+        android:hint="Eon"/>
 
     <TextView
         android:layout_marginTop="20dp"
@@ -58,7 +73,6 @@
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:hint="VEHICLE COLOR"/>
-
     <EditText
         android:id="@+id/activity_driver_info_Etcolor"
         android:layout_marginTop="10dp"
@@ -67,15 +81,23 @@
         android:textStyle="bold"
         android:hint="Black"/>
 
-   <EditText
-       android:layout_marginTop="50dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Year"
+        android:textStyle="italic" />
+
+    <EditText
+       android:layout_marginTop="20dp"
        android:id="@+id/activity_driver_info_Etdatepicker"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+        android:textStyle="bold"
        android:hint="Date"/>
     <Button
         android:id="@+id/activity_driver_info_Btn_submit"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="30dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"

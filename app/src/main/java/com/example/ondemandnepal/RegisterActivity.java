@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private TextInputLayout email;
-    private TextInputLayout password;
+    private TextInputLayout password ,confirmpassword;
      private EditText id, firstName ,lastName,mobile;
      Double lat ,lng;
 
@@ -45,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         Button register =(Button) findViewById(R.id.register_activity_Btnregister);
         email =findViewById(R.id.register_activity_Etemail);
         password =findViewById(R.id.register_activity_Etpassword);
+        confirmpassword =findViewById(R.id.register_activity_EtConformpassword);
         firstName = findViewById(R.id.register_activity_ETfirstname);
         lastName =findViewById(R.id.register_activity_Etlastname);
         mobile =findViewById(R.id.register_activity_Etmobile);
@@ -87,16 +88,6 @@ public class RegisterActivity extends AppCompatActivity {
         Call<UserResponse> register = onDemandNepalApi.register(new RegisterRequest( null,firstName,lastName ,email,password ,lat,lng));
 
 
-
-
-
-    /*    Call<UserResponse> register = NetworkServices
-                .getInstance()
-                .getClient()
-                .register(new RegisterRequest( null,firstName,lastName ,email,password ,lat,lng));
-*/
-
-
        register.enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
@@ -110,6 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onFailure(Call<UserResponse> call, Throwable t) {
                 //failure
                 t.printStackTrace();
+
             }
         });
 
@@ -145,6 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
             return true;
         }
     }
+  //  if(password.getText().toString().equals(confirmpassword.getText().toString()))
 
 
 

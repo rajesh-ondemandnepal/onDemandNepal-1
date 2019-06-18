@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "339059686242",
+    "firebase_url": "https://fcm-notification-a87e8.firebaseio.com",
+    "project_id": "fcm-notification-a87e8",
+    "storage_bucket": "fcm-notification-a87e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339059686242:android:3091673593d021c0",
+        "android_client_info": {
+          "package_name": "com.example.ondemandnepal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339059686242-vv25r6i5r0nlnjdfusn7lfkppp107dib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApLlqwKfUhgRnnzHH-OOt3GlUF80cEIag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339059686242-vv25r6i5r0nlnjdfusn7lfkppp107dib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

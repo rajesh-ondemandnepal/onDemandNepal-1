@@ -14,5 +14,6 @@
     <string name="not_having_account">Not Having an Account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="logout">Logout</string>
+    <string name="fcm_token">FCM Token: %s</string>
 
 </resources>

@@ -2,7 +2,6 @@ package com.example.ondemandnepal;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface OnDemandNepalApi {
@@ -14,7 +13,18 @@ public interface OnDemandNepalApi {
     @POST("user/register")
     Call<UserResponse> register(
            @Body RegisterRequest registerRequest
-
-
     );
+
+
+    @POST("driver/register")
+    Call<DriverResponse> driverRegister(
+            @Body DriverRequest driverRequest
+    );
+
+    @POST("fcm")
+    Call<TokenResponse> tokenRegister(
+            @Body TokenRequest tokenRequest
+    );
+
+
 }

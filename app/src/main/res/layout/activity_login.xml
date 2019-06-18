@@ -8,9 +8,18 @@
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        />
+
     <!-- Email Label -->
     <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/login_activity_Etemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
