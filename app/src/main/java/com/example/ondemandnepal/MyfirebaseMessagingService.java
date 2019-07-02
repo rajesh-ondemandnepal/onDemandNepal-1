@@ -112,7 +112,6 @@ MyfirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onNewToken(String token) {
         Log.d(TAG, "Refreshed token: " + token);
-
         // If you want to send messages to this application instance or
         // manage this apps subscriptions on the server side, send the
         // Instance ID token to your app server.
@@ -162,6 +161,7 @@ MyfirebaseMessagingService extends FirebaseMessagingService {
       //  int userId=this.userId;
 //        String pushToken=this.token ;
         String pushToken=token ;
+        // token =fcQwtisiMYQ:APA91bECKnmmpd-XpPzGskUprWLT8eCmMR5OFit2-vq4SZGRzoMrcGOVl3FLtZlR5vlUjnTDFYZYLhU48197E9cxmM4BvMGJ7Ofv0W_Z0YeLEHHS_S2n3VM3dH78j1YH-EkY8xooiuoJ
        // String deviceInfo =this.deviceInfo;
 
 

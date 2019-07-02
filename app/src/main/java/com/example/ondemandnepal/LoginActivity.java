@@ -1,14 +1,16 @@
 package com.example.ondemandnepal;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
 
@@ -32,34 +34,68 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout email;
     private TextInputLayout password;
     private Button login;
-    private TextView notRegister,forgetPassword;
+    private TextView notRegister,forgetPassword ,addDriver,addVehicle;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_in);
 
         email = findViewById(R.id.login_activity_Etemail);
         password = findViewById(R.id.login_activity_Etpassword);
         login =findViewById(R.id.login_activity_Btnlogin);
-        notRegister=findViewById(R.id.login_activity_Tvnotregister);
+       // notRegister=findViewById(R.id.login_activity_Tvnotregister);
         forgetPassword= findViewById(R.id.login_activity_Tvforgetpassword);
+       // addDriver= findViewById(R.id.login_activity_Tv_add_driver);
+       // addVehicle= findViewById(R.id.login_activity_Tv_add_vehicle);
 
-        notRegister.setOnClickListener(new View.OnClickListener() {
+       /* notRegister.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-               /* Intent intent = new Intent(LoginActivity.this, RouteNavigationActivity.class);
+               *//* Intent intent = new Intent(LoginActivity.this, RouteNavigationActivity.class);
                 startActivity(intent);
-                finish();*/
+                finish();*//*
 
                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
 
             }
         });
+
+
+        addDriver.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+               *//* Intent intent = new Intent(LoginActivity.this, RouteNavigationActivity.class);
+                startActivity(intent);
+                finish();*//*
+
+                Intent intent = new Intent(LoginActivity.this, DriverRegistrationActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        addVehicle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+               *//* Intent intent = new Intent(LoginActivity.this, RouteNavigationActivity.class);
+                startActivity(intent);
+                finish();*//*
+
+                Intent intent = new Intent(LoginActivity.this, VehicleRegistration.class);
+                startActivity(intent);
+
+            }
+        });
+*/
 
         forgetPassword.setOnClickListener(new View.OnClickListener() {
 
@@ -95,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 //success
                 response.body();
-                Intent intent = new Intent(LoginActivity.this, StreetMapsActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
                 startActivity(intent);
 
             }

@@ -1,8 +1,7 @@
 package com.example.ondemandnepal;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.OnStreetViewPanoramaReadyCallback;
@@ -21,7 +20,7 @@ class StreetMapsActivity extends AppCompatActivity implements GoogleMap.OnMarker
     private static final String MARKER_POSITION_KEY = "MarkerPosition";
 
     // George St, Sydney
-    private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
+    private static final LatLng KATHMANDU = new LatLng(-33.87365, 151.20689);
 
     private StreetViewPanorama mStreetViewPanorama;
 
@@ -34,7 +33,7 @@ class StreetMapsActivity extends AppCompatActivity implements GoogleMap.OnMarker
 
         final LatLng markerPosition;
         if (savedInstanceState == null) {
-            markerPosition = SYDNEY;
+            markerPosition = KATHMANDU;
         } else {
             markerPosition =     savedInstanceState.getParcelable(MARKER_POSITION_KEY);
         }
@@ -52,7 +51,7 @@ class StreetMapsActivity extends AppCompatActivity implements GoogleMap.OnMarker
                         // Only need to set the position once as the streetview fragment will maintain
                         // its state.
                         if (savedInstanceState == null) {
-                            mStreetViewPanorama.setPosition(SYDNEY);
+                            mStreetViewPanorama.setPosition(KATHMANDU);
                         }
                     }
                 });

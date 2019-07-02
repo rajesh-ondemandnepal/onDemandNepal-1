@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_margin="15dp"
+    android:layout_margin="20dp"
     android:layout_height="match_parent"
-    tools:context=".DriverInfoActivity">
+    tools:context=".DriverRegistrationActivity">
     <TextView
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="5dp"
     android:orientation="vertical">
 
     <TextView
@@ -31,7 +31,7 @@
         android:hint="VEHICLE MAKE"/>
 
     <EditText
-        android:id="@+id/activity_driver_info_Etvehicle_make"
+        android:id="@+id/activity_vehicle_registration_Etvehicle_make"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:hint="VEHICLE MODEL"/>
 
     <EditText
-        android:id="@+id/activity_driver_info_Etvehicle_model"
+        android:id="@+id/activity_vehicle_registration_Etvehicle_model"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         android:hint="VEHICLE REGISTRATION NO"/>
 
     <EditText
-        android:id="@+id/activity_driver_info_Etvehiclereg"
+        android:id="@+id/activity_vehicle_registration_Etvehiclereg"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,29 +74,29 @@
         android:textStyle="italic"
         android:hint="VEHICLE COLOR"/>
     <EditText
-        android:id="@+id/activity_driver_info_Etcolor"
+        android:id="@+id/activity_vehicle_registration_Etcolor"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:hint="Black"/>
 
-    <TextView
+   <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Year"
-        android:textStyle="italic" />
+        android:textStyle="italic" />-->
 
     <EditText
        android:layout_marginTop="20dp"
-       android:id="@+id/activity_driver_info_Etdatepicker"
+       android:id="@+id/activity_vehicle_registration_Etdatepicker"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
         android:textStyle="bold"
        android:hint="Date"/>
     <Button
-        android:id="@+id/activity_driver_info_Btn_submit"
+        android:id="@+id/activity_vehicle_registration_Btn_submit"
         android:layout_marginTop="30dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"

@@ -21,7 +21,12 @@ public interface OnDemandNepalApi {
             @Body DriverRequest driverRequest
     );
 
-    @POST("fcm")
+    @POST("vehicle")
+    Call<VehicleResponse> vehicleRegister(
+            @Body VehicleRequest vehicleRequest
+    );
+
+    @POST("push")
     Call<TokenResponse> tokenRegister(
             @Body TokenRequest tokenRequest
     );

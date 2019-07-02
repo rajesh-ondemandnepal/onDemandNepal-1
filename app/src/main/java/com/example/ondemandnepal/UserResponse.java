@@ -1,6 +1,6 @@
 package com.example.ondemandnepal;
 
-import java.util.List;
+import com.example.ondemandnepal.model.User;
 
 public class UserResponse {
     private boolean error;

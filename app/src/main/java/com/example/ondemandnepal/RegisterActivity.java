@@ -2,13 +2,14 @@ package com.example.ondemandnepal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
 
@@ -39,17 +40,17 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_sign_up);
 
 
         Button register =(Button) findViewById(R.id.register_activity_Btnregister);
         email =findViewById(R.id.register_activity_Etemail);
         password =findViewById(R.id.register_activity_Etpassword);
-        confirmpassword =findViewById(R.id.register_activity_EtConformpassword);
+        //confirmpassword =findViewById(R.id.register_activity_EtConformpassword);
         firstName = findViewById(R.id.register_activity_ETfirstname);
         lastName =findViewById(R.id.register_activity_Etlastname);
-        mobile =findViewById(R.id.register_activity_Etmobile);
-        TextView alreadylogin = (TextView)findViewById(R.id.register_activity_Btnalreadylogin);
+        mobile =findViewById(R.id.register_activity_Etphone);
+       // TextView alreadylogin = (TextView)findViewById(R.id.register_activity_Btnalreadylogin);
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        alreadylogin.setOnClickListener(new View.OnClickListener() {
+      /*  alreadylogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -72,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 
@@ -93,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 //success
                 response.body();
-                  Intent intent = new Intent(RegisterActivity.this, DriverInfoActivity.class);
+                  Intent intent = new Intent(RegisterActivity.this, DriverRegistrationActivity.class);
                 startActivity(intent);
             }
 

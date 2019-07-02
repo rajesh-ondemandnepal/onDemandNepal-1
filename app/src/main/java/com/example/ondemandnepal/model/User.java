@@ -1,7 +1,5 @@
-package com.example.ondemandnepal;
+package com.example.ondemandnepal.model;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.Date;
 
 public class User {
     @SerializedName("id")

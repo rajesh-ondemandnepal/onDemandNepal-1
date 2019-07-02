@@ -1,15 +1,12 @@
 package com.example.ondemandnepal;
 
-import android.net.Network;
-import android.os.Build;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkServices {
-    private final static String API_BASE_URL = "http://192.168.1.106:8080/";
+    private final static String API_BASE_URL = "http://192.168.1.113:8080/";
     private OnDemandNepalApi client;
 
     private static NetworkServices instance;

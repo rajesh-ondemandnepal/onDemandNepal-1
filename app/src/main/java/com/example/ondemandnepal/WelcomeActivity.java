@@ -7,16 +7,18 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class WelcomeActivity extends AppCompatActivity {
     private static final int NOTIFICATION_PERMISSION_CODE = 123;
     private static final int ON_DO_NOT_DISTURB_CALLBACK_CODE = 112;
+    public static final String ACCESS_NOTIFICATION_POLICY = null;
     Dialog MyDialog;
     Button btnloguser, btnlogdriver, cross;
     Button btnreguser, btnregdriver;
@@ -58,7 +60,10 @@ public class WelcomeActivity extends AppCompatActivity {
 
     }
 
-    /*private void requestNotificationPermission() {
+
+
+
+/*    private void requestNotificationPermission() {
 
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_NOTIFICATION_POLICY)) {
@@ -83,7 +88,11 @@ public class WelcomeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Oops you just denied the permission", Toast.LENGTH_LONG).show();
             }
         }
-    }*/
+    }
+
+*/
+
+
 
 
 
@@ -106,6 +115,9 @@ public class WelcomeActivity extends AppCompatActivity {
             return;
         }
 
+
+
+
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
         if ( notificationManager.isNotificationPolicyAccessGranted()) {
             AudioManager audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
@@ -116,12 +128,9 @@ public class WelcomeActivity extends AppCompatActivity {
             // startActivity(intent);
             startActivityForResult( intent, WelcomeActivity.ON_DO_NOT_DISTURB_CALLBACK_CODE );
             //startActivityForResult(intent);
-
-
         }
-
-
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
