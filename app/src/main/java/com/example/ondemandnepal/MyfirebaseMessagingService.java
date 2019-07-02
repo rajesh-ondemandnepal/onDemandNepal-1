@@ -9,8 +9,9 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 
@@ -118,9 +119,39 @@ MyfirebaseMessagingService extends FirebaseMessagingService {
 
         //this.token=token;
         sendRegistrationToServer(token);
+       // sendToServer(token);
     }
 
 
+   /* private void sendToServer(String token) {
+
+        try {
+            URL url = new URL("http://192.168.1.69:8080/fcm");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+
+            connection.setRequestMethod("POST");
+
+            DataOutputStream dos = new DataOutputStream(connection.getOutputStream());
+
+            dos.writeBytes("token=" + token);
+
+            connection.connect();
+
+            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                // Do whatever you want after the
+                // token is successfully stored on the server
+            }
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+*/
 
     private void sendRegistrationToServer(String token) {
 
@@ -129,7 +160,8 @@ MyfirebaseMessagingService extends FirebaseMessagingService {
 
         //  int id=this.id ;
       //  int userId=this.userId;
-        String pushToken=this.token ;
+//        String pushToken=this.token ;
+        String pushToken=token ;
        // String deviceInfo =this.deviceInfo;
 
 
